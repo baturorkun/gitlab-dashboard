@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">ProjectID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Full Path</th>
+    </tr>
+    </thead>
+    <tbody>
+    {%for project in projects%}
+    <tr>
+        <th scope="col">{{ project["id"] }}</th>
+        <th scope="col">{{ project["name"] }}</th>
+        <th scope="col">{{ project["path_with_namespace"] }}</th>
+    </tr>
+    {%endfor%}
+    </tbody>
+</table>
+
+
+{% endblock %}

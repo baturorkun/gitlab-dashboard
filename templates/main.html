@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row align-items-md-stretch">
+    {%for project in projects%}
+    <div class="col-md-4 mb-4">
+        <div class="h-100 p-5 text-white bg-dark rounded-3 mb-4" id="box-{{ project }}">
+            <h4 class="projectTitle" data-id="{{ project }}">>{{ project }}</h4>
+            <p class="projectInfo" data-id="{{ project }}"></p>
+            <p class="pipelineInfo" data-id="{{ project }}"></p>
+
+        </div>
+    </div>
+    {%endfor%}
+</div>
+
+{% endblock %}

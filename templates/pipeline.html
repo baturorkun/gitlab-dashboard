@@ -1,0 +1,10 @@
+{% if data["sha"] %}
+Pipeline
+<a href="{{ gitUrl(data['detailed_status']['details_path']) }}" class="text-dark" target="_blank">
+{{ data["id"] }}
+</a> on
+"<a href="" class="text-dark">{{ data["ref"] }}</a>" by <b class="text-dark"> {{ data["user"].name }} </b>
+| {{ data["status"] }}
+{% else %}
+No Pipeline
+{% endif %}

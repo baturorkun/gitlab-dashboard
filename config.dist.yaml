@@ -1,0 +1,10 @@
+gitlab:
+  url : "https://gitlab.example.com"
+  token: "XXXXXXXXXXXXXX"
+  apiVersion: "v4"
+
+projects:
+  - 2
+  - 17
+  - 7
+  - 21
