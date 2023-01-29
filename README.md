@@ -7,9 +7,7 @@ cd gitlab-dashboard
 
 pip3 install virtualenv
 
-pipenv install requests
-
-virtualenv venv
+virtualenv -p python3 venv
 
 source venv/bin/activate
 
