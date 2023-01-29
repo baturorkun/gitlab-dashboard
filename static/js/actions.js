@@ -11,6 +11,11 @@ $( document ).ready(function() {
         $(el).html("Loading....").load("/project?id=" + $(el).attr("data-id"))
     });
 
+    $(".projectInfo").each( function (i, el) {
+        $(el).html("Loading....").load("/project/info?id=" + $(el).attr("data-id"))
+    });
+
+
     $(".pipelineInfo").each( function (i, el) {
         $(el).html("Loading....").load("/pipelines/latest?id=" + $(el).attr("data-id"),
             function (res, stat) {

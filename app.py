@@ -40,6 +40,16 @@ def projects():
     return render_template('projects.html', projects=data)
 
 
+@app.route('/project/info', methods=('GET', 'POST'))
+def info():
+    project_id = request.args.get('id')
+    gl = Gitlab()
+    branches = gl.getBranches(project_id)
+    mergerequests = gl.getMergeRequests(project_id)
+
+    return render_template('info.html', branches_count=len(branches), mergerequests_count=len(mergerequests))
+
+
 @app.route('/pipelines', methods=('GET', 'POST'))
 def pipelines():
     id = request.args.get('id')

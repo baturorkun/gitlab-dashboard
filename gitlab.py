@@ -41,3 +41,11 @@ class Gitlab:
     def getPipelines(self, project_id):
         resp = self._callURL(f"/projects/{project_id}/pipelines")
         return resp
+
+    def getBranches(self, project_id):
+        resp = self._callURL(f"/projects/{project_id}/repository/branches?per_page=250")
+        return resp
+
+    def getMergeRequests(self, project_id):
+        resp = self._callURL(f"/projects/{project_id}/repository/merge_requests?state=opened")
+        return resp
