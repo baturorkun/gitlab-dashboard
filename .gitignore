@@ -1,3 +1,5 @@
 config.yaml
 work
 venv
+.idea
+__pycache__
